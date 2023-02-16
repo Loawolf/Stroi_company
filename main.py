@@ -6,7 +6,7 @@ with sq.connect("StroiDom.db") as con:
 
     enter = input("Введите команду: ")
     if enter == '/reg':
-        reg()
+        reg(input("Логин: "), input("Пароль: "))
     elif enter == '/log':
         login()
     else:
