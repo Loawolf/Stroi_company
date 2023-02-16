@@ -1,5 +1,5 @@
 import sqlite3
-db = sqlite3.connect('Stroi.db')
+db = sqlite3.connect('StroiDom.db')
 sql = db.cursor()
 
 
@@ -12,7 +12,7 @@ def login():
         print("Такого пользователя не существует")
 
     elif sql.execute(f"SELECT login FROM Пользователи WHERE login = '{user_password}'") != sql.fetchone() is None:
-        print('Такого пользователя не существует')
+        print('Вы вошли!')
 
 
 def reg():
